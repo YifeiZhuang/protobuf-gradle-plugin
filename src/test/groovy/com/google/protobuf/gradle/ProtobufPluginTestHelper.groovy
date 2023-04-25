@@ -172,10 +172,7 @@ buildscript {
     ${androidPluginVersion ? "ext.androidPluginVersion = \"${androidPluginVersion}\"" : ""}
     ${kotlinVersion ? "ext.kotlinVersion = \"${kotlinVersion}\"" : ""}
     repositories {
-        // JCenter has a broken upload of lint-gradle-api-26.1.2, as it is missing the JAR. So we
-        // put thet Google repo first
         maven { url "https://dl.google.com/dl/android/maven2/" }
-        jcenter()
         maven { url "https://plugins.gradle.org/m2/" }
     }
     dependencies {
